@@ -1,0 +1,289 @@
+html, body {
+	height: 100%;
+	padding-top: 25px;
+}
+.carousel, .item, .active {
+	height: 100%;
+}
+.carousel-inner {
+	height: 100%;
+}
+@media screen and (min-width: 768px){
+.test-indicators {
+    bottom: -40px;
+}}
+.test-indicators {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    padding-left: 0;
+    margin-left: -30%;
+    text-align: center;
+    list-style: none;
+}
+.test-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #000 \9;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+.test-indicators .active {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  background-color: #fff;
+}
+.fill {
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+}
+.img-center {
+	margin: 0 auto;
+}
+body {
+	background: #fff;
+}
+#main {
+	height: 100%;
+}
+section {
+	padding: 6% 0;
+	min-height: 100%
+}
+.about {
+    background: url("https://placeholdit.imgix.net/~text?bg=FACA2B&txtsize=50&txtclr=000000&txt=Slide1&w=1920&h=1080") no-repeat center center scroll;
+    padding: 100px 0;
+	
+}
+#dot-nav {
+	right: 10px;
+	top: 50%;
+	margin-top: -50px;
+	height: 100px;
+	z-index: 999;
+}
+#dot-nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#dot-nav li {
+	position: relative;
+	background-color: #fff;
+	border: 3px solid #000;
+	border-radius: 15px 15px 15px 15px;
+	cursor: pointer;
+	padding: 5px;
+	height: 10px;
+	margin: 10px 10px 0px 0px;
+	width: 10px;
+	vertical-align: bottom;
+}
+#dot-nav li.active, #dot-nav li:hover {
+	background-color: #000;
+}
+#dot-nav a {
+	outline: 0;
+	vertical-align: top;
+	margin: 0px 0px 0px 25px;
+	position: relative;
+	top: -5px;
+}
+.awesome-tooltip + .tooltip > .tooltip-inner {
+	background-color: #333;
+	color: #f5f5f5;
+	border: 1px solid #fff;
+}
+.awesome-tooltip + .tooltip.left > .tooltip-arrow {
+	top: 50%;
+	right: 0;
+	margin-top: -5px;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid #8e44ad;
+}
+
+.accordian {
+	width: 805px;
+	height: 320px;
+	overflow: hidden;
+	
+	/*Time for some styling*/
+	margin: 100px auto;
+	 box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35); 
+    -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35); 
+	-moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+}
+
+/*A small hack to prevent flickering on some browsers*/
+.accordian ul {
+	width: 2000px;
+	/*This will give ample space to the last item to move
+	instead of falling down/flickering during hovers.*/
+}
+
+.accordian li {
+	position: relative;
+	display: block;
+	width: 160px;
+	float: left;
+	
+	border-left: 1px solid #888;
+	
+	box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	
+	/*Transitions to give animation effect*/
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	/*If you hover on the images now you should be able to 
+	see the basic accordian*/
+}
+
+/*Reduce with of un-hovered elements*/
+.accordian ul:hover li {width: 40px;}
+/*Lets apply hover effects now*/
+/*The LI hover style should override the UL hover style*/
+.accordian ul li:hover {width: 640px;}
+
+
+.accordian li img {
+	display: block;
+}
+
+/*Image title styles*/
+.image_title {
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	left: 0; bottom: 0;	
+width: 640px;	
+
+}
+.image_title a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	padding: 20px;
+	font-size: 16px;
+}html, body {
+	height: 100%;
+	padding-top: 25px;
+}
+.carousel, .item, .active {
+	height: 100%;
+}
+.carousel-inner {
+	height: 100%;
+}
+@media screen and (min-width: 768px){
+.test-indicators {
+    bottom: -40px;
+}}
+.test-indicators {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    z-index: 15;
+    width: 60%;
+    padding-left: 0;
+    margin-left: -30%;
+    text-align: center;
+    list-style: none;
+}
+.test-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #000 \9;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+.test-indicators .active {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  background-color: #fff;
+}
+.fill {
+	width: 100%;
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+}
+.img-center {
+	margin: 0 auto;
+}
+body {
+	background: #fff;
+}
+#main {
+	height: 100%;
+}
+section {
+	padding: 6% 0;
+	min-height: 100%
+}
+#dot-nav {
+	right: 10px;
+	top: 50%;
+	margin-top: -50px;
+	height: 100px;
+	z-index: 999;
+}
+#dot-nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#dot-nav li {
+	position: relative;
+	background-color: #fff;
+	border: 3px solid #000;
+	border-radius: 15px 15px 15px 15px;
+	cursor: pointer;
+	padding: 5px;
+	height: 10px;
+	margin: 10px 10px 0px 0px;
+	width: 10px;
+	vertical-align: bottom;
+}
+#dot-nav li.active, #dot-nav li:hover {
+	background-color: #000;
+}
+#dot-nav a {
+	outline: 0;
+	vertical-align: top;
+	margin: 0px 0px 0px 25px;
+	position: relative;
+	top: -5px;
+}
+.awesome-tooltip + .tooltip > .tooltip-inner {
+	background-color: #333;
+	color: #f5f5f5;
+	border: 1px solid #fff;
+}
+.awesome-tooltip + .tooltip.left > .tooltip-arrow {
+	top: 50%;
+	right: 0;
+	margin-top: -5px;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid #8e44ad;
+}
+
