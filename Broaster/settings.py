@@ -14,8 +14,12 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+import os
+DJ_PROJECT_DIR = os.path.dirname(__file__)
+BASE_DIR = os.path.dirname(DJ_PROJECT_DIR)
+WSGI_DIR = os.path.dirname(BASE_DIR)
+REPO_DIR = os.path.dirname(WSGI_DIR)
+DATA_DIR = os.environ.get('OPENSHIFT_DATA_DIR', BASE_DIR)
 
 
 # Quick-start development settings - unsuitable for production
@@ -26,8 +30,13 @@ SECRET_KEY = 'r&kr2wxqc315dp@q2$@fl^ow!g6im!vp)21(y+h2k57+wdq^3e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
+from socket import gethostname
+ALLOWED_HOSTS = [
+    gethostname(), # For internal OpenShift load balancer security purposes.
+    os.environ.get('OPENSHIFT_APP_DNS'), # Dynamically map to the OpenShift gear name.
+    #'example.com', # First DNS alias (set up in the app)
+    #'www.example.com', # Second DNS alias (set up in the app)
+]
 
 
 # Application definition
@@ -82,10 +91,10 @@ WSGI_APPLICATION = 'Broaster.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'broaster',                      # Or path to database file if using sqlite3.
-        'USER': 'root',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '127.0.0.1',                      # Set to empty string for localhost. Not used with sqlite3.
+        'NAME': 'yellowtie',                      # Or path to database file if using sqlite3.
+        'USER': 'adminiAk3yg9',                      # Not used with sqlite3.
+        'PASSWORD': '3ARUVNlxt4mp',                  # Not used with sqlite3.
+        'HOST': '127.3.129.2',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '3306',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
