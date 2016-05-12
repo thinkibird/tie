@@ -15,8 +15,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 import os
-DJ_PROJECT_DIR = os.path.dirname(__file__)
-BASE_DIR = os.path.dirname(DJ_PROJECT_DIR)
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 WSGI_DIR = os.path.dirname(BASE_DIR)
 REPO_DIR = os.path.dirname(WSGI_DIR)
 DATA_DIR = os.environ.get('OPENSHIFT_DATA_DIR', BASE_DIR)
@@ -69,7 +68,7 @@ ROOT_URLCONF = 'Broaster.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates',],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
